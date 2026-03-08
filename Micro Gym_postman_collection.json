@@ -1,0 +1,1266 @@
+{
+  "info": {
+    "_postman_id": "2cfe5435-3154-401d-91f7-bc42d72506af",
+    "name": "Micro Gym",
+    "description": "Colección completa de pruebas para el sistema de microservicios del gimnasio.\n\n**Servicios:**\n- gym-equipment-service (8081)\n- microservicio-gimnasio-miembros (8080)\n- clases-service (8082)\n- gym-entrenador-service (8085)",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "38822923"
+  },
+  "item": [
+    {
+      "name": "Entrenadores Service (8085)",
+      "item": [
+        {
+          "name": "GET - Todos los entrenadores",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8085/api/entrenadores",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8085",
+              "path": ["api", "entrenadores"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "GET - Entrenador por ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8085/api/entrenadores/1",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8085",
+              "path": ["api", "entrenadores", "1"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "POST - Crear entrenador",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"nombre\": \"Carlos Martínez\",\n    \"especialidad\": \"CrossFit\"\n}",
+              "options": {"raw": {"language": "json"}}
+            },
+            "url": {
+              "raw": "http://localhost:8085/api/entrenadores",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8085",
+              "path": ["api", "entrenadores"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "PUT - Actualizar entrenador",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"nombre\": \"Carlos Martínez López\",\n    \"especialidad\": \"CrossFit y Funcional\"\n}",
+              "options": {"raw": {"language": "json"}}
+            },
+            "url": {
+              "raw": "http://localhost:8085/api/entrenadores/1",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8085",
+              "path": ["api", "entrenadores", "1"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "DELETE - Eliminar entrenador",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8085/api/entrenadores/5",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8085",
+              "path": ["api", "entrenadores", "5"]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Equipment Service (8081)",
+      "item": [
+        {
+          "name": "GET - Todos los equipos",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8081/api/equipment",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8081",
+              "path": ["api", "equipment"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "GET - Equipo por ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8081/api/equipment/1",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8081",
+              "path": ["api", "equipment", "1"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "GET - Equipos disponibles",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8081/api/equipment/available",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8081",
+              "path": ["api", "equipment", "available"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "GET - Equipos por estado",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8081/api/equipment/status/EN_USO",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8081",
+              "path": ["api", "equipment", "status", "EN_USO"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "GET - Buscar por nombre",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8081/api/equipment/search?name=Bicicleta",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8081",
+              "path": ["api", "equipment", "search"],
+              "query": [{"key": "name", "value": "Bicicleta"}]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "POST - Crear equipo",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"nombre\": \"Pesas 15kg\",\n    \"descripcion\": \"Kettlebell de 15 kilogramos\",\n    \"cantidad\": 10\n}",
+              "options": {"raw": {"language": "json"}}
+            },
+            "url": {
+              "raw": "http://localhost:8081/api/equipment",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8081",
+              "path": ["api", "equipment"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "PUT - Actualizar equipo",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"nombre\": \"Bicicleta Estática Pro\",\n    \"descripcion\": \"Bicicleta estática modelo profesional\",\n    \"cantidad\": 12\n}",
+              "options": {"raw": {"language": "json"}}
+            },
+            "url": {
+              "raw": "http://localhost:8081/api/equipment/1",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8081",
+              "path": ["api", "equipment", "1"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "DELETE - Eliminar equipo",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8081/api/equipment/6",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8081",
+              "path": ["api", "equipment", "6"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "POST - Usar equipo",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"cantidad\": 5\n}",
+              "options": {"raw": {"language": "json"}}
+            },
+            "url": {
+              "raw": "http://localhost:8081/api/equipment/1/use",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8081",
+              "path": ["api", "equipment", "1", "use"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "POST - Liberar equipo",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"cantidad\": 3\n}",
+              "options": {"raw": {"language": "json"}}
+            },
+            "url": {
+              "raw": "http://localhost:8081/api/equipment/1/release",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8081",
+              "path": ["api", "equipment", "1", "release"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "PUT - Poner en mantenimiento",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8081/api/equipment/4/maintenance",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8081",
+              "path": ["api", "equipment", "4", "maintenance"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "PUT - Finalizar mantenimiento",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8081/api/equipment/4/end-maintenance",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8081",
+              "path": ["api", "equipment", "4", "end-maintenance"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "TEST - Usar más de lo disponible (Error)",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"cantidad\": 100\n}",
+              "options": {"raw": {"language": "json"}}
+            },
+            "url": {
+              "raw": "http://localhost:8081/api/equipment/5/use",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8081",
+              "path": ["api", "equipment", "5", "use"]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Miembros Service (8080)",
+      "item": [
+        {
+          "name": "CRUD Miembros",
+          "item": [
+            {
+              "name": "GET - Obtener todos los miembros",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:8080/api/miembros/obtenerMiembros",
+                  "protocol": "http",
+                  "host": ["localhost"],
+                  "port": "8080",
+                  "path": ["api", "miembros", "obtenerMiembros"]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "GET - Obtener miembro por ID",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:8080/api/miembros/obtenerMiembroPorId/1",
+                  "protocol": "http",
+                  "host": ["localhost"],
+                  "port": "8080",
+                  "path": ["api", "miembros", "obtenerMiembroPorId", "1"]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "POST - Agregar miembro",
+              "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"nombre\": \"Juan Pérez\",\n    \"email\": \"juan.perez@email.com\",\n    \"telefono\": \"555-1234\",\n    \"fechaInscripcion\": \"2026-02-23\",\n    \"tipoMembresia\": \"PREMIUM\"\n}",
+                  "options": {"raw": {"language": "json"}}
+                },
+                "url": {
+                  "raw": "http://localhost:8080/api/miembros/agregarMiembro",
+                  "protocol": "http",
+                  "host": ["localhost"],
+                  "port": "8080",
+                  "path": ["api", "miembros", "agregarMiembro"]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "PUT - Actualizar miembro",
+              "request": {
+                "method": "PUT",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"nombre\": \"Juan Pérez Actualizado\",\n    \"email\": \"juan.perez.nuevo@email.com\",\n    \"telefono\": \"555-5678\",\n    \"tipoMembresia\": \"VIP\"\n}",
+                  "options": {"raw": {"language": "json"}}
+                },
+                "url": {
+                  "raw": "http://localhost:8080/api/miembros/actualizarMiembro/1",
+                  "protocol": "http",
+                  "host": ["localhost"],
+                  "port": "8080",
+                  "path": ["api", "miembros", "actualizarMiembro", "1"]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "DELETE - Eliminar miembro",
+              "request": {
+                "method": "DELETE",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:8080/api/miembros/eliminarMiembro/5",
+                  "protocol": "http",
+                  "host": ["localhost"],
+                  "port": "8080",
+                  "path": ["api", "miembros", "eliminarMiembro", "5"]
+                }
+              },
+              "response": []
+            }
+          ]
+        },
+        {
+          "name": "Integración Miembro-Equipos",
+          "item": [
+            {
+              "name": "GET - Verificar estado servicio equipos",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:8080/api/miembros/equipos/status",
+                  "protocol": "http",
+                  "host": ["localhost"],
+                  "port": "8080",
+                  "path": ["api", "miembros", "equipos", "status"]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "GET - Todos los equipos (desde miembros)",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:8080/api/miembros/equipos",
+                  "protocol": "http",
+                  "host": ["localhost"],
+                  "port": "8080",
+                  "path": ["api", "miembros", "equipos"]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "GET - Equipos disponibles para miembro",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:8080/api/miembros/1/equipos/disponibles",
+                  "protocol": "http",
+                  "host": ["localhost"],
+                  "port": "8080",
+                  "path": ["api", "miembros", "1", "equipos", "disponibles"]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "POST - Miembro usa equipo",
+              "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"cantidad\": 2\n}",
+                  "options": {"raw": {"language": "json"}}
+                },
+                "url": {
+                  "raw": "http://localhost:8080/api/miembros/1/equipos/1/usar",
+                  "protocol": "http",
+                  "host": ["localhost"],
+                  "port": "8080",
+                  "path": ["api", "miembros", "1", "equipos", "1", "usar"]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "POST - Miembro libera equipo",
+              "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"cantidad\": 1\n}",
+                  "options": {"raw": {"language": "json"}}
+                },
+                "url": {
+                  "raw": "http://localhost:8080/api/miembros/1/equipos/1/liberar",
+                  "protocol": "http",
+                  "host": ["localhost"],
+                  "port": "8080",
+                  "path": ["api", "miembros", "1", "equipos", "1", "liberar"]
+                }
+              },
+              "response": []
+            }
+          ]
+        },
+        {
+          "name": "Integración Miembro-Entrenadores",
+          "item": [
+            {
+              "name": "GET - Entrenadores disponibles",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:8080/api/miembros/entrenadores-disponibles",
+                  "protocol": "http",
+                  "host": ["localhost"],
+                  "port": "8080",
+                  "path": ["api", "miembros", "entrenadores-disponibles"]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "GET - Buscar entrenadores por especialidad",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:8080/api/miembros/entrenadores/por-especialidad?especialidad=Yoga",
+                  "protocol": "http",
+                  "host": ["localhost"],
+                  "port": "8080",
+                  "path": ["api", "miembros", "entrenadores", "por-especialidad"],
+                  "query": [{"key": "especialidad", "value": "Yoga"}]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "POST - Asignar entrenador personal",
+              "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"entrenadorId\": 1\n}",
+                  "options": {"raw": {"language": "json"}}
+                },
+                "url": {
+                  "raw": "http://localhost:8080/api/miembros/1/entrenador-personal",
+                  "protocol": "http",
+                  "host": ["localhost"],
+                  "port": "8080",
+                  "path": ["api", "miembros", "1", "entrenador-personal"]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "GET - Miembro con entrenador",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:8080/api/miembros/1/con-entrenador",
+                  "protocol": "http",
+                  "host": ["localhost"],
+                  "port": "8080",
+                  "path": ["api", "miembros", "1", "con-entrenador"]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "GET - Todos miembros con entrenadores",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:8080/api/miembros/con-entrenadores",
+                  "protocol": "http",
+                  "host": ["localhost"],
+                  "port": "8080",
+                  "path": ["api", "miembros", "con-entrenadores"]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "GET - Miembros por entrenador",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:8080/api/miembros/por-entrenador/1",
+                  "protocol": "http",
+                  "host": ["localhost"],
+                  "port": "8080",
+                  "path": ["api", "miembros", "por-entrenador", "1"]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "DELETE - Remover entrenador personal",
+              "request": {
+                "method": "DELETE",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:8080/api/miembros/1/entrenador-personal",
+                  "protocol": "http",
+                  "host": ["localhost"],
+                  "port": "8080",
+                  "path": ["api", "miembros", "1", "entrenador-personal"]
+                }
+              },
+              "response": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Clases Service (8082)",
+      "item": [
+        {
+          "name": "CRUD Clases",
+          "item": [
+            {
+              "name": "GET - Obtener todas las clases",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:8082/gym/clases/obtener",
+                  "protocol": "http",
+                  "host": ["localhost"],
+                  "port": "8082",
+                  "path": ["gym", "clases", "obtener"]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "GET - Datos iniciales de clases",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:8082/gym/clases/datos-iniciales",
+                  "protocol": "http",
+                  "host": ["localhost"],
+                  "port": "8082",
+                  "path": ["gym", "clases", "datos-iniciales"]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "POST - Programar nueva clase",
+              "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"nombre\": \"HIIT Avanzado\",\n    \"horario\": \"2026-02-25T17:00:00\",\n    \"capacidadMaxima\": 15\n}",
+                  "options": {"raw": {"language": "json"}}
+                },
+                "url": {
+                  "raw": "http://localhost:8082/gym/clases/programar",
+                  "protocol": "http",
+                  "host": ["localhost"],
+                  "port": "8082",
+                  "path": ["gym", "clases", "programar"]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "DELETE - Eliminar clase",
+              "request": {
+                "method": "DELETE",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:8082/gym/clases/eliminar/10",
+                  "protocol": "http",
+                  "host": ["localhost"],
+                  "port": "8082",
+                  "path": ["gym", "clases", "eliminar", "10"]
+                }
+              },
+              "response": []
+            }
+          ]
+        },
+        {
+          "name": "Integración Clase-Equipos",
+          "item": [
+            {
+              "name": "POST - Agregar equipo a clase",
+              "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"equipoId\": 1,\n    \"cantidadRequerida\": 5\n}",
+                  "options": {"raw": {"language": "json"}}
+                },
+                "url": {
+                  "raw": "http://localhost:8082/gym/clases/2/equipos",
+                  "protocol": "http",
+                  "host": ["localhost"],
+                  "port": "8082",
+                  "path": ["gym", "clases", "2", "equipos"]
+                },
+                "description": "Agrega Bicicleta Estática (id=1) a la clase Spinning (id=2)"
+              },
+              "response": []
+            },
+            {
+              "name": "POST - Agregar segundo equipo a clase",
+              "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"equipoId\": 5,\n    \"cantidadRequerida\": 3\n}",
+                  "options": {"raw": {"language": "json"}}
+                },
+                "url": {
+                  "raw": "http://localhost:8082/gym/clases/2/equipos",
+                  "protocol": "http",
+                  "host": ["localhost"],
+                  "port": "8082",
+                  "path": ["gym", "clases", "2", "equipos"]
+                },
+                "description": "Agrega Elíptica (id=5) a la clase Spinning (id=2)"
+              },
+              "response": []
+            },
+            {
+              "name": "GET - Listar equipos de una clase",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:8082/gym/clases/2/equipos",
+                  "protocol": "http",
+                  "host": ["localhost"],
+                  "port": "8082",
+                  "path": ["gym", "clases", "2", "equipos"]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "GET - Detalle completo de clase",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:8082/gym/clases/2/detalle",
+                  "protocol": "http",
+                  "host": ["localhost"],
+                  "port": "8082",
+                  "path": ["gym", "clases", "2", "detalle"]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "GET - Verificar disponibilidad equipos",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:8082/gym/clases/2/verificar-disponibilidad",
+                  "protocol": "http",
+                  "host": ["localhost"],
+                  "port": "8082",
+                  "path": ["gym", "clases", "2", "verificar-disponibilidad"]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "POST - Reservar equipos para clase",
+              "request": {
+                "method": "POST",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:8082/gym/clases/2/reservar-equipos",
+                  "protocol": "http",
+                  "host": ["localhost"],
+                  "port": "8082",
+                  "path": ["gym", "clases", "2", "reservar-equipos"]
+                },
+                "description": "Reserva todos los equipos necesarios cuando inicia la clase"
+              },
+              "response": []
+            },
+            {
+              "name": "POST - Liberar equipos de clase",
+              "request": {
+                "method": "POST",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:8082/gym/clases/2/liberar-equipos",
+                  "protocol": "http",
+                  "host": ["localhost"],
+                  "port": "8082",
+                  "path": ["gym", "clases", "2", "liberar-equipos"]
+                },
+                "description": "Libera todos los equipos cuando termina la clase"
+              },
+              "response": []
+            },
+            {
+              "name": "DELETE - Quitar equipo de clase",
+              "request": {
+                "method": "DELETE",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:8082/gym/clases/2/equipos/5",
+                  "protocol": "http",
+                  "host": ["localhost"],
+                  "port": "8082",
+                  "path": ["gym", "clases", "2", "equipos", "5"]
+                },
+                "description": "Elimina el equipo Elíptica (id=5) de la clase Spinning (id=2)"
+              },
+              "response": []
+            }
+          ]
+        },
+        {
+          "name": "Integración Clase-Entrenadores",
+          "item": [
+            {
+              "name": "GET - Entrenadores disponibles",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:8082/gym/clases/entrenadores-disponibles",
+                  "protocol": "http",
+                  "host": ["localhost"],
+                  "port": "8082",
+                  "path": ["gym", "clases", "entrenadores-disponibles"]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "GET - Buscar clases por especialidad",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:8082/gym/clases/por-especialidad?especialidad=Yoga",
+                  "protocol": "http",
+                  "host": ["localhost"],
+                  "port": "8082",
+                  "path": ["gym", "clases", "por-especialidad"],
+                  "query": [{"key": "especialidad", "value": "Yoga"}]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "POST - Asignar entrenador a clase",
+              "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"entrenadorId\": 1\n}",
+                  "options": {"raw": {"language": "json"}}
+                },
+                "url": {
+                  "raw": "http://localhost:8082/gym/clases/1/entrenador",
+                  "protocol": "http",
+                  "host": ["localhost"],
+                  "port": "8082",
+                  "path": ["gym", "clases", "1", "entrenador"]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "GET - Clase con entrenador",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:8082/gym/clases/1/con-entrenador",
+                  "protocol": "http",
+                  "host": ["localhost"],
+                  "port": "8082",
+                  "path": ["gym", "clases", "1", "con-entrenador"]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "GET - Todas las clases con entrenadores",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:8082/gym/clases/con-entrenadores",
+                  "protocol": "http",
+                  "host": ["localhost"],
+                  "port": "8082",
+                  "path": ["gym", "clases", "con-entrenadores"]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "DELETE - Remover entrenador de clase",
+              "request": {
+                "method": "DELETE",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:8082/gym/clases/1/entrenador",
+                  "protocol": "http",
+                  "host": ["localhost"],
+                  "port": "8082",
+                  "path": ["gym", "clases", "1", "entrenador"]
+                }
+              },
+              "response": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Flujos de Integración",
+      "item": [
+        {
+          "name": "Flujo 1: Miembro usa equipo",
+          "item": [
+            {
+              "name": "1. Ver equipos disponibles",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:8081/api/equipment/available",
+                  "protocol": "http",
+                  "host": ["localhost"],
+                  "port": "8081",
+                  "path": ["api", "equipment", "available"]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "2. Miembro usa 3 bicicletas",
+              "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"cantidad\": 3\n}",
+                  "options": {"raw": {"language": "json"}}
+                },
+                "url": {
+                  "raw": "http://localhost:8080/api/miembros/1/equipos/1/usar",
+                  "protocol": "http",
+                  "host": ["localhost"],
+                  "port": "8080",
+                  "path": ["api", "miembros", "1", "equipos", "1", "usar"]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "3. Verificar disponibilidad reducida",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:8081/api/equipment/1",
+                  "protocol": "http",
+                  "host": ["localhost"],
+                  "port": "8081",
+                  "path": ["api", "equipment", "1"]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "4. Miembro devuelve 2 bicicletas",
+              "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"cantidad\": 2\n}",
+                  "options": {"raw": {"language": "json"}}
+                },
+                "url": {
+                  "raw": "http://localhost:8080/api/miembros/1/equipos/1/liberar",
+                  "protocol": "http",
+                  "host": ["localhost"],
+                  "port": "8080",
+                  "path": ["api", "miembros", "1", "equipos", "1", "liberar"]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "5. Verificar disponibilidad restaurada",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:8081/api/equipment/1",
+                  "protocol": "http",
+                  "host": ["localhost"],
+                  "port": "8081",
+                  "path": ["api", "equipment", "1"]
+                }
+              },
+              "response": []
+            }
+          ]
+        },
+        {
+          "name": "Flujo 2: Clase reserva equipos",
+          "item": [
+            {
+              "name": "1. Ver estado inicial del equipo",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:8081/api/equipment/3",
+                  "protocol": "http",
+                  "host": ["localhost"],
+                  "port": "8081",
+                  "path": ["api", "equipment", "3"]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "2. Agregar mancuernas a clase CrossFit",
+              "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"equipoId\": 3,\n    \"cantidadRequerida\": 10\n}",
+                  "options": {"raw": {"language": "json"}}
+                },
+                "url": {
+                  "raw": "http://localhost:8082/gym/clases/4/equipos",
+                  "protocol": "http",
+                  "host": ["localhost"],
+                  "port": "8082",
+                  "path": ["gym", "clases", "4", "equipos"]
+                },
+                "description": "Agregar Mancuernas 10kg (id=3) a CrossFit (id=4)"
+              },
+              "response": []
+            },
+            {
+              "name": "3. Agregar bancos a clase CrossFit",
+              "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"equipoId\": 4,\n    \"cantidadRequerida\": 4\n}",
+                  "options": {"raw": {"language": "json"}}
+                },
+                "url": {
+                  "raw": "http://localhost:8082/gym/clases/4/equipos",
+                  "protocol": "http",
+                  "host": ["localhost"],
+                  "port": "8082",
+                  "path": ["gym", "clases", "4", "equipos"]
+                },
+                "description": "Agregar Banco de Pesas (id=4) a CrossFit (id=4)"
+              },
+              "response": []
+            },
+            {
+              "name": "4. Ver equipos requeridos",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:8082/gym/clases/4/equipos",
+                  "protocol": "http",
+                  "host": ["localhost"],
+                  "port": "8082",
+                  "path": ["gym", "clases", "4", "equipos"]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "5. Verificar disponibilidad antes de reservar",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:8082/gym/clases/4/verificar-disponibilidad",
+                  "protocol": "http",
+                  "host": ["localhost"],
+                  "port": "8082",
+                  "path": ["gym", "clases", "4", "verificar-disponibilidad"]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "6. Iniciar clase - Reservar equipos",
+              "request": {
+                "method": "POST",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:8082/gym/clases/4/reservar-equipos",
+                  "protocol": "http",
+                  "host": ["localhost"],
+                  "port": "8082",
+                  "path": ["gym", "clases", "4", "reservar-equipos"]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "7. Verificar equipos reservados",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:8081/api/equipment/3",
+                  "protocol": "http",
+                  "host": ["localhost"],
+                  "port": "8081",
+                  "path": ["api", "equipment", "3"]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "8. Terminar clase - Liberar equipos",
+              "request": {
+                "method": "POST",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:8082/gym/clases/4/liberar-equipos",
+                  "protocol": "http",
+                  "host": ["localhost"],
+                  "port": "8082",
+                  "path": ["gym", "clases", "4", "liberar-equipos"]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "9. Verificar equipos liberados",
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:8081/api/equipment/3",
+                  "protocol": "http",
+                  "host": ["localhost"],
+                  "port": "8081",
+                  "path": ["api", "equipment", "3"]
+                }
+              },
+              "response": []
+            }
+          ]
+        },
+        {
+          "name": "Flujo 3: Error - Equipo en mantenimiento",
+          "item": [
+            {
+              "name": "1. Poner equipo en mantenimiento",
+              "request": {
+                "method": "PUT",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:8081/api/equipment/2/maintenance",
+                  "protocol": "http",
+                  "host": ["localhost"],
+                  "port": "8081",
+                  "path": ["api", "equipment", "2", "maintenance"]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "2. Intentar usar equipo (Error esperado)",
+              "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"cantidad\": 1\n}",
+                  "options": {"raw": {"language": "json"}}
+                },
+                "url": {
+                  "raw": "http://localhost:8081/api/equipment/2/use",
+                  "protocol": "http",
+                  "host": ["localhost"],
+                  "port": "8081",
+                  "path": ["api", "equipment", "2", "use"]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "3. Terminar mantenimiento",
+              "request": {
+                "method": "PUT",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:8081/api/equipment/2/end-maintenance",
+                  "protocol": "http",
+                  "host": ["localhost"],
+                  "port": "8081",
+                  "path": ["api", "equipment", "2", "end-maintenance"]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "4. Ahora sí usar equipo",
+              "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"cantidad\": 1\n}",
+                  "options": {"raw": {"language": "json"}}
+                },
+                "url": {
+                  "raw": "http://localhost:8081/api/equipment/2/use",
+                  "protocol": "http",
+                  "host": ["localhost"],
+                  "port": "8081",
+                  "path": ["api", "equipment", "2", "use"]
+                }
+              },
+              "response": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

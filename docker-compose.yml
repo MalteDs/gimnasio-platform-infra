@@ -1,0 +1,78 @@
+version: '3.8'
+
+services:
+  # ==================== KEYCLOAK ====================
+  keycloak:
+    image: quay.io/keycloak/keycloak:26.5.5
+    container_name: keycloak-gimnasio
+    environment:
+      KC_BOOTSTRAP_ADMIN_USERNAME: admin
+      KC_BOOTSTRAP_ADMIN_PASSWORD: admin
+    ports:
+      - "8180:8080"
+    command:
+      - start-dev
+    networks:
+      - gimnasio-network
+
+  # ==================== RABBITMQ ====================
+  rabbitmq:
+    image: rabbitmq:3.12-management
+    container_name: rabbitmq-gimnasio
+    environment:
+      RABBITMQ_DEFAULT_USER: gimnasio
+      RABBITMQ_DEFAULT_PASS: gimnasio123
+    ports:
+      - "5672:5672"   # AMQP protocol
+      - "15672:15672" # Management UI
+    volumes:
+      - rabbitmq_data:/var/lib/rabbitmq
+    networks:
+      - gimnasio-network
+
+  # ==================== KAFKA (KRaft mode - no Zookeeper) ====================
+  kafka:
+    image: apache/kafka:3.7.0
+    container_name: kafka-gimnasio
+    environment:
+      KAFKA_NODE_ID: 1
+      KAFKA_PROCESS_ROLES: broker,controller
+      KAFKA_LISTENERS: PLAINTEXT://0.0.0.0:9092,CONTROLLER://0.0.0.0:9093,EXTERNAL://0.0.0.0:29092
+      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://kafka:9092,EXTERNAL://localhost:29092
+      KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: CONTROLLER:PLAINTEXT,PLAINTEXT:PLAINTEXT,EXTERNAL:PLAINTEXT
+      KAFKA_CONTROLLER_QUORUM_VOTERS: 1@kafka:9093
+      KAFKA_CONTROLLER_LISTENER_NAMES: CONTROLLER
+      KAFKA_INTER_BROKER_LISTENER_NAME: PLAINTEXT
+      KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
+      KAFKA_TRANSACTION_STATE_LOG_REPLICATION_FACTOR: 1
+      KAFKA_TRANSACTION_STATE_LOG_MIN_ISR: 1
+      KAFKA_LOG_DIRS: /var/lib/kafka/data
+      CLUSTER_ID: 'MkU3OEVBNTcwNTJENDM2Qk'
+    ports:
+      - "29092:29092"
+    volumes:
+      - kafka_data:/var/lib/kafka/data
+    networks:
+      - gimnasio-network
+
+  # ==================== KAFKA UI (Opcional - para visualización) ====================
+  kafka-ui:
+    image: provectuslabs/kafka-ui:latest
+    container_name: kafka-ui-gimnasio
+    environment:
+      KAFKA_CLUSTERS_0_NAME: gimnasio-cluster
+      KAFKA_CLUSTERS_0_BOOTSTRAPSERVERS: kafka:9092
+    ports:
+      - "8090:8080"
+    depends_on:
+      - kafka
+    networks:
+      - gimnasio-network
+
+volumes:
+  rabbitmq_data:
+  kafka_data:
+
+networks:
+  gimnasio-network:
+    driver: bridge
