@@ -1,10 +1,10 @@
 {
   "info": {
-    "_postman_id": "2cfe5435-3154-401d-91f7-bc42d72506af",
+    "_postman_id": "e9a74def-0023-494a-82e4-191329fc05d3",
     "name": "Micro Gym",
     "description": "Colección completa de pruebas para el sistema de microservicios del gimnasio.\n\n**Servicios:**\n- gym-equipment-service (8081)\n- microservicio-gimnasio-miembros (8080)\n- clases-service (8082)\n- gym-entrenador-service (8085)",
     "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-    "_exporter_id": "38822923"
+    "_exporter_id": "34964642"
   },
   "item": [
     {
@@ -18,9 +18,14 @@
             "url": {
               "raw": "http://localhost:8085/api/entrenadores",
               "protocol": "http",
-              "host": ["localhost"],
+              "host": [
+                "localhost"
+              ],
               "port": "8085",
-              "path": ["api", "entrenadores"]
+              "path": [
+                "api",
+                "entrenadores"
+              ]
             }
           },
           "response": []
@@ -33,9 +38,15 @@
             "url": {
               "raw": "http://localhost:8085/api/entrenadores/1",
               "protocol": "http",
-              "host": ["localhost"],
+              "host": [
+                "localhost"
+              ],
               "port": "8085",
-              "path": ["api", "entrenadores", "1"]
+              "path": [
+                "api",
+                "entrenadores",
+                "1"
+              ]
             }
           },
           "response": []
@@ -48,14 +59,23 @@
             "body": {
               "mode": "raw",
               "raw": "{\n    \"nombre\": \"Carlos Martínez\",\n    \"especialidad\": \"CrossFit\"\n}",
-              "options": {"raw": {"language": "json"}}
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
             },
             "url": {
               "raw": "http://localhost:8085/api/entrenadores",
               "protocol": "http",
-              "host": ["localhost"],
+              "host": [
+                "localhost"
+              ],
               "port": "8085",
-              "path": ["api", "entrenadores"]
+              "path": [
+                "api",
+                "entrenadores"
+              ]
             }
           },
           "response": []
@@ -68,14 +88,24 @@
             "body": {
               "mode": "raw",
               "raw": "{\n    \"nombre\": \"Carlos Martínez López\",\n    \"especialidad\": \"CrossFit y Funcional\"\n}",
-              "options": {"raw": {"language": "json"}}
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
             },
             "url": {
               "raw": "http://localhost:8085/api/entrenadores/1",
               "protocol": "http",
-              "host": ["localhost"],
+              "host": [
+                "localhost"
+              ],
               "port": "8085",
-              "path": ["api", "entrenadores", "1"]
+              "path": [
+                "api",
+                "entrenadores",
+                "1"
+              ]
             }
           },
           "response": []
@@ -88,9 +118,15 @@
             "url": {
               "raw": "http://localhost:8085/api/entrenadores/5",
               "protocol": "http",
-              "host": ["localhost"],
+              "host": [
+                "localhost"
+              ],
               "port": "8085",
-              "path": ["api", "entrenadores", "5"]
+              "path": [
+                "api",
+                "entrenadores",
+                "5"
+              ]
             }
           },
           "response": []
@@ -108,9 +144,14 @@
             "url": {
               "raw": "http://localhost:8081/api/equipment",
               "protocol": "http",
-              "host": ["localhost"],
+              "host": [
+                "localhost"
+              ],
               "port": "8081",
-              "path": ["api", "equipment"]
+              "path": [
+                "api",
+                "equipment"
+              ]
             }
           },
           "response": []
@@ -123,9 +164,15 @@
             "url": {
               "raw": "http://localhost:8081/api/equipment/1",
               "protocol": "http",
-              "host": ["localhost"],
+              "host": [
+                "localhost"
+              ],
               "port": "8081",
-              "path": ["api", "equipment", "1"]
+              "path": [
+                "api",
+                "equipment",
+                "1"
+              ]
             }
           },
           "response": []
@@ -138,9 +185,15 @@
             "url": {
               "raw": "http://localhost:8081/api/equipment/available",
               "protocol": "http",
-              "host": ["localhost"],
+              "host": [
+                "localhost"
+              ],
               "port": "8081",
-              "path": ["api", "equipment", "available"]
+              "path": [
+                "api",
+                "equipment",
+                "available"
+              ]
             }
           },
           "response": []
@@ -153,9 +206,16 @@
             "url": {
               "raw": "http://localhost:8081/api/equipment/status/EN_USO",
               "protocol": "http",
-              "host": ["localhost"],
+              "host": [
+                "localhost"
+              ],
               "port": "8081",
-              "path": ["api", "equipment", "status", "EN_USO"]
+              "path": [
+                "api",
+                "equipment",
+                "status",
+                "EN_USO"
+              ]
             }
           },
           "response": []
@@ -168,10 +228,21 @@
             "url": {
               "raw": "http://localhost:8081/api/equipment/search?name=Bicicleta",
               "protocol": "http",
-              "host": ["localhost"],
+              "host": [
+                "localhost"
+              ],
               "port": "8081",
-              "path": ["api", "equipment", "search"],
-              "query": [{"key": "name", "value": "Bicicleta"}]
+              "path": [
+                "api",
+                "equipment",
+                "search"
+              ],
+              "query": [
+                {
+                  "key": "name",
+                  "value": "Bicicleta"
+                }
+              ]
             }
           },
           "response": []
@@ -184,14 +255,23 @@
             "body": {
               "mode": "raw",
               "raw": "{\n    \"nombre\": \"Pesas 15kg\",\n    \"descripcion\": \"Kettlebell de 15 kilogramos\",\n    \"cantidad\": 10\n}",
-              "options": {"raw": {"language": "json"}}
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
             },
             "url": {
               "raw": "http://localhost:8081/api/equipment",
               "protocol": "http",
-              "host": ["localhost"],
+              "host": [
+                "localhost"
+              ],
               "port": "8081",
-              "path": ["api", "equipment"]
+              "path": [
+                "api",
+                "equipment"
+              ]
             }
           },
           "response": []
@@ -204,14 +284,24 @@
             "body": {
               "mode": "raw",
               "raw": "{\n    \"nombre\": \"Bicicleta Estática Pro\",\n    \"descripcion\": \"Bicicleta estática modelo profesional\",\n    \"cantidad\": 12\n}",
-              "options": {"raw": {"language": "json"}}
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
             },
             "url": {
               "raw": "http://localhost:8081/api/equipment/1",
               "protocol": "http",
-              "host": ["localhost"],
+              "host": [
+                "localhost"
+              ],
               "port": "8081",
-              "path": ["api", "equipment", "1"]
+              "path": [
+                "api",
+                "equipment",
+                "1"
+              ]
             }
           },
           "response": []
@@ -224,9 +314,15 @@
             "url": {
               "raw": "http://localhost:8081/api/equipment/6",
               "protocol": "http",
-              "host": ["localhost"],
+              "host": [
+                "localhost"
+              ],
               "port": "8081",
-              "path": ["api", "equipment", "6"]
+              "path": [
+                "api",
+                "equipment",
+                "6"
+              ]
             }
           },
           "response": []
@@ -239,14 +335,25 @@
             "body": {
               "mode": "raw",
               "raw": "{\n    \"cantidad\": 5\n}",
-              "options": {"raw": {"language": "json"}}
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
             },
             "url": {
               "raw": "http://localhost:8081/api/equipment/1/use",
               "protocol": "http",
-              "host": ["localhost"],
+              "host": [
+                "localhost"
+              ],
               "port": "8081",
-              "path": ["api", "equipment", "1", "use"]
+              "path": [
+                "api",
+                "equipment",
+                "1",
+                "use"
+              ]
             }
           },
           "response": []
@@ -259,14 +366,25 @@
             "body": {
               "mode": "raw",
               "raw": "{\n    \"cantidad\": 3\n}",
-              "options": {"raw": {"language": "json"}}
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
             },
             "url": {
               "raw": "http://localhost:8081/api/equipment/1/release",
               "protocol": "http",
-              "host": ["localhost"],
+              "host": [
+                "localhost"
+              ],
               "port": "8081",
-              "path": ["api", "equipment", "1", "release"]
+              "path": [
+                "api",
+                "equipment",
+                "1",
+                "release"
+              ]
             }
           },
           "response": []
@@ -279,9 +397,16 @@
             "url": {
               "raw": "http://localhost:8081/api/equipment/4/maintenance",
               "protocol": "http",
-              "host": ["localhost"],
+              "host": [
+                "localhost"
+              ],
               "port": "8081",
-              "path": ["api", "equipment", "4", "maintenance"]
+              "path": [
+                "api",
+                "equipment",
+                "4",
+                "maintenance"
+              ]
             }
           },
           "response": []
@@ -294,9 +419,16 @@
             "url": {
               "raw": "http://localhost:8081/api/equipment/4/end-maintenance",
               "protocol": "http",
-              "host": ["localhost"],
+              "host": [
+                "localhost"
+              ],
               "port": "8081",
-              "path": ["api", "equipment", "4", "end-maintenance"]
+              "path": [
+                "api",
+                "equipment",
+                "4",
+                "end-maintenance"
+              ]
             }
           },
           "response": []
@@ -309,14 +441,25 @@
             "body": {
               "mode": "raw",
               "raw": "{\n    \"cantidad\": 100\n}",
-              "options": {"raw": {"language": "json"}}
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
             },
             "url": {
               "raw": "http://localhost:8081/api/equipment/5/use",
               "protocol": "http",
-              "host": ["localhost"],
+              "host": [
+                "localhost"
+              ],
               "port": "8081",
-              "path": ["api", "equipment", "5", "use"]
+              "path": [
+                "api",
+                "equipment",
+                "5",
+                "use"
+              ]
             }
           },
           "response": []
@@ -337,9 +480,15 @@
                 "url": {
                   "raw": "http://localhost:8080/api/miembros/obtenerMiembros",
                   "protocol": "http",
-                  "host": ["localhost"],
+                  "host": [
+                    "localhost"
+                  ],
                   "port": "8080",
-                  "path": ["api", "miembros", "obtenerMiembros"]
+                  "path": [
+                    "api",
+                    "miembros",
+                    "obtenerMiembros"
+                  ]
                 }
               },
               "response": []
@@ -352,9 +501,16 @@
                 "url": {
                   "raw": "http://localhost:8080/api/miembros/obtenerMiembroPorId/1",
                   "protocol": "http",
-                  "host": ["localhost"],
+                  "host": [
+                    "localhost"
+                  ],
                   "port": "8080",
-                  "path": ["api", "miembros", "obtenerMiembroPorId", "1"]
+                  "path": [
+                    "api",
+                    "miembros",
+                    "obtenerMiembroPorId",
+                    "1"
+                  ]
                 }
               },
               "response": []
@@ -367,14 +523,24 @@
                 "body": {
                   "mode": "raw",
                   "raw": "{\n    \"nombre\": \"Juan Pérez\",\n    \"email\": \"juan.perez@email.com\",\n    \"telefono\": \"555-1234\",\n    \"fechaInscripcion\": \"2026-02-23\",\n    \"tipoMembresia\": \"PREMIUM\"\n}",
-                  "options": {"raw": {"language": "json"}}
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
                 },
                 "url": {
                   "raw": "http://localhost:8080/api/miembros/agregarMiembro",
                   "protocol": "http",
-                  "host": ["localhost"],
+                  "host": [
+                    "localhost"
+                  ],
                   "port": "8080",
-                  "path": ["api", "miembros", "agregarMiembro"]
+                  "path": [
+                    "api",
+                    "miembros",
+                    "agregarMiembro"
+                  ]
                 }
               },
               "response": []
@@ -387,14 +553,25 @@
                 "body": {
                   "mode": "raw",
                   "raw": "{\n    \"nombre\": \"Juan Pérez Actualizado\",\n    \"email\": \"juan.perez.nuevo@email.com\",\n    \"telefono\": \"555-5678\",\n    \"tipoMembresia\": \"VIP\"\n}",
-                  "options": {"raw": {"language": "json"}}
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
                 },
                 "url": {
                   "raw": "http://localhost:8080/api/miembros/actualizarMiembro/1",
                   "protocol": "http",
-                  "host": ["localhost"],
+                  "host": [
+                    "localhost"
+                  ],
                   "port": "8080",
-                  "path": ["api", "miembros", "actualizarMiembro", "1"]
+                  "path": [
+                    "api",
+                    "miembros",
+                    "actualizarMiembro",
+                    "1"
+                  ]
                 }
               },
               "response": []
@@ -407,9 +584,16 @@
                 "url": {
                   "raw": "http://localhost:8080/api/miembros/eliminarMiembro/5",
                   "protocol": "http",
-                  "host": ["localhost"],
+                  "host": [
+                    "localhost"
+                  ],
                   "port": "8080",
-                  "path": ["api", "miembros", "eliminarMiembro", "5"]
+                  "path": [
+                    "api",
+                    "miembros",
+                    "eliminarMiembro",
+                    "5"
+                  ]
                 }
               },
               "response": []
@@ -427,9 +611,16 @@
                 "url": {
                   "raw": "http://localhost:8080/api/miembros/equipos/status",
                   "protocol": "http",
-                  "host": ["localhost"],
+                  "host": [
+                    "localhost"
+                  ],
                   "port": "8080",
-                  "path": ["api", "miembros", "equipos", "status"]
+                  "path": [
+                    "api",
+                    "miembros",
+                    "equipos",
+                    "status"
+                  ]
                 }
               },
               "response": []
@@ -442,9 +633,15 @@
                 "url": {
                   "raw": "http://localhost:8080/api/miembros/equipos",
                   "protocol": "http",
-                  "host": ["localhost"],
+                  "host": [
+                    "localhost"
+                  ],
                   "port": "8080",
-                  "path": ["api", "miembros", "equipos"]
+                  "path": [
+                    "api",
+                    "miembros",
+                    "equipos"
+                  ]
                 }
               },
               "response": []
@@ -457,9 +654,17 @@
                 "url": {
                   "raw": "http://localhost:8080/api/miembros/1/equipos/disponibles",
                   "protocol": "http",
-                  "host": ["localhost"],
+                  "host": [
+                    "localhost"
+                  ],
                   "port": "8080",
-                  "path": ["api", "miembros", "1", "equipos", "disponibles"]
+                  "path": [
+                    "api",
+                    "miembros",
+                    "1",
+                    "equipos",
+                    "disponibles"
+                  ]
                 }
               },
               "response": []
@@ -472,14 +677,27 @@
                 "body": {
                   "mode": "raw",
                   "raw": "{\n    \"cantidad\": 2\n}",
-                  "options": {"raw": {"language": "json"}}
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
                 },
                 "url": {
                   "raw": "http://localhost:8080/api/miembros/1/equipos/1/usar",
                   "protocol": "http",
-                  "host": ["localhost"],
+                  "host": [
+                    "localhost"
+                  ],
                   "port": "8080",
-                  "path": ["api", "miembros", "1", "equipos", "1", "usar"]
+                  "path": [
+                    "api",
+                    "miembros",
+                    "1",
+                    "equipos",
+                    "1",
+                    "usar"
+                  ]
                 }
               },
               "response": []
@@ -492,14 +710,27 @@
                 "body": {
                   "mode": "raw",
                   "raw": "{\n    \"cantidad\": 1\n}",
-                  "options": {"raw": {"language": "json"}}
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
                 },
                 "url": {
                   "raw": "http://localhost:8080/api/miembros/1/equipos/1/liberar",
                   "protocol": "http",
-                  "host": ["localhost"],
+                  "host": [
+                    "localhost"
+                  ],
                   "port": "8080",
-                  "path": ["api", "miembros", "1", "equipos", "1", "liberar"]
+                  "path": [
+                    "api",
+                    "miembros",
+                    "1",
+                    "equipos",
+                    "1",
+                    "liberar"
+                  ]
                 }
               },
               "response": []
@@ -517,9 +748,15 @@
                 "url": {
                   "raw": "http://localhost:8080/api/miembros/entrenadores-disponibles",
                   "protocol": "http",
-                  "host": ["localhost"],
+                  "host": [
+                    "localhost"
+                  ],
                   "port": "8080",
-                  "path": ["api", "miembros", "entrenadores-disponibles"]
+                  "path": [
+                    "api",
+                    "miembros",
+                    "entrenadores-disponibles"
+                  ]
                 }
               },
               "response": []
@@ -532,10 +769,22 @@
                 "url": {
                   "raw": "http://localhost:8080/api/miembros/entrenadores/por-especialidad?especialidad=Yoga",
                   "protocol": "http",
-                  "host": ["localhost"],
+                  "host": [
+                    "localhost"
+                  ],
                   "port": "8080",
-                  "path": ["api", "miembros", "entrenadores", "por-especialidad"],
-                  "query": [{"key": "especialidad", "value": "Yoga"}]
+                  "path": [
+                    "api",
+                    "miembros",
+                    "entrenadores",
+                    "por-especialidad"
+                  ],
+                  "query": [
+                    {
+                      "key": "especialidad",
+                      "value": "Yoga"
+                    }
+                  ]
                 }
               },
               "response": []
@@ -548,14 +797,25 @@
                 "body": {
                   "mode": "raw",
                   "raw": "{\n    \"entrenadorId\": 1\n}",
-                  "options": {"raw": {"language": "json"}}
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
                 },
                 "url": {
                   "raw": "http://localhost:8080/api/miembros/1/entrenador-personal",
                   "protocol": "http",
-                  "host": ["localhost"],
+                  "host": [
+                    "localhost"
+                  ],
                   "port": "8080",
-                  "path": ["api", "miembros", "1", "entrenador-personal"]
+                  "path": [
+                    "api",
+                    "miembros",
+                    "1",
+                    "entrenador-personal"
+                  ]
                 }
               },
               "response": []
@@ -568,9 +828,16 @@
                 "url": {
                   "raw": "http://localhost:8080/api/miembros/1/con-entrenador",
                   "protocol": "http",
-                  "host": ["localhost"],
+                  "host": [
+                    "localhost"
+                  ],
                   "port": "8080",
-                  "path": ["api", "miembros", "1", "con-entrenador"]
+                  "path": [
+                    "api",
+                    "miembros",
+                    "1",
+                    "con-entrenador"
+                  ]
                 }
               },
               "response": []
@@ -583,9 +850,15 @@
                 "url": {
                   "raw": "http://localhost:8080/api/miembros/con-entrenadores",
                   "protocol": "http",
-                  "host": ["localhost"],
+                  "host": [
+                    "localhost"
+                  ],
                   "port": "8080",
-                  "path": ["api", "miembros", "con-entrenadores"]
+                  "path": [
+                    "api",
+                    "miembros",
+                    "con-entrenadores"
+                  ]
                 }
               },
               "response": []
@@ -598,9 +871,16 @@
                 "url": {
                   "raw": "http://localhost:8080/api/miembros/por-entrenador/1",
                   "protocol": "http",
-                  "host": ["localhost"],
+                  "host": [
+                    "localhost"
+                  ],
                   "port": "8080",
-                  "path": ["api", "miembros", "por-entrenador", "1"]
+                  "path": [
+                    "api",
+                    "miembros",
+                    "por-entrenador",
+                    "1"
+                  ]
                 }
               },
               "response": []
@@ -613,9 +893,16 @@
                 "url": {
                   "raw": "http://localhost:8080/api/miembros/1/entrenador-personal",
                   "protocol": "http",
-                  "host": ["localhost"],
+                  "host": [
+                    "localhost"
+                  ],
                   "port": "8080",
-                  "path": ["api", "miembros", "1", "entrenador-personal"]
+                  "path": [
+                    "api",
+                    "miembros",
+                    "1",
+                    "entrenador-personal"
+                  ]
                 }
               },
               "response": []
@@ -638,9 +925,15 @@
                 "url": {
                   "raw": "http://localhost:8082/gym/clases/obtener",
                   "protocol": "http",
-                  "host": ["localhost"],
+                  "host": [
+                    "localhost"
+                  ],
                   "port": "8082",
-                  "path": ["gym", "clases", "obtener"]
+                  "path": [
+                    "gym",
+                    "clases",
+                    "obtener"
+                  ]
                 }
               },
               "response": []
@@ -653,9 +946,15 @@
                 "url": {
                   "raw": "http://localhost:8082/gym/clases/datos-iniciales",
                   "protocol": "http",
-                  "host": ["localhost"],
+                  "host": [
+                    "localhost"
+                  ],
                   "port": "8082",
-                  "path": ["gym", "clases", "datos-iniciales"]
+                  "path": [
+                    "gym",
+                    "clases",
+                    "datos-iniciales"
+                  ]
                 }
               },
               "response": []
@@ -668,14 +967,24 @@
                 "body": {
                   "mode": "raw",
                   "raw": "{\n    \"nombre\": \"HIIT Avanzado\",\n    \"horario\": \"2026-02-25T17:00:00\",\n    \"capacidadMaxima\": 15\n}",
-                  "options": {"raw": {"language": "json"}}
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
                 },
                 "url": {
                   "raw": "http://localhost:8082/gym/clases/programar",
                   "protocol": "http",
-                  "host": ["localhost"],
+                  "host": [
+                    "localhost"
+                  ],
                   "port": "8082",
-                  "path": ["gym", "clases", "programar"]
+                  "path": [
+                    "gym",
+                    "clases",
+                    "programar"
+                  ]
                 }
               },
               "response": []
@@ -688,9 +997,16 @@
                 "url": {
                   "raw": "http://localhost:8082/gym/clases/eliminar/10",
                   "protocol": "http",
-                  "host": ["localhost"],
+                  "host": [
+                    "localhost"
+                  ],
                   "port": "8082",
-                  "path": ["gym", "clases", "eliminar", "10"]
+                  "path": [
+                    "gym",
+                    "clases",
+                    "eliminar",
+                    "10"
+                  ]
                 }
               },
               "response": []
@@ -708,14 +1024,25 @@
                 "body": {
                   "mode": "raw",
                   "raw": "{\n    \"equipoId\": 1,\n    \"cantidadRequerida\": 5\n}",
-                  "options": {"raw": {"language": "json"}}
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
                 },
                 "url": {
                   "raw": "http://localhost:8082/gym/clases/2/equipos",
                   "protocol": "http",
-                  "host": ["localhost"],
+                  "host": [
+                    "localhost"
+                  ],
                   "port": "8082",
-                  "path": ["gym", "clases", "2", "equipos"]
+                  "path": [
+                    "gym",
+                    "clases",
+                    "2",
+                    "equipos"
+                  ]
                 },
                 "description": "Agrega Bicicleta Estática (id=1) a la clase Spinning (id=2)"
               },
@@ -729,14 +1056,25 @@
                 "body": {
                   "mode": "raw",
                   "raw": "{\n    \"equipoId\": 5,\n    \"cantidadRequerida\": 3\n}",
-                  "options": {"raw": {"language": "json"}}
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
                 },
                 "url": {
                   "raw": "http://localhost:8082/gym/clases/2/equipos",
                   "protocol": "http",
-                  "host": ["localhost"],
+                  "host": [
+                    "localhost"
+                  ],
                   "port": "8082",
-                  "path": ["gym", "clases", "2", "equipos"]
+                  "path": [
+                    "gym",
+                    "clases",
+                    "2",
+                    "equipos"
+                  ]
                 },
                 "description": "Agrega Elíptica (id=5) a la clase Spinning (id=2)"
               },
@@ -750,9 +1088,16 @@
                 "url": {
                   "raw": "http://localhost:8082/gym/clases/2/equipos",
                   "protocol": "http",
-                  "host": ["localhost"],
+                  "host": [
+                    "localhost"
+                  ],
                   "port": "8082",
-                  "path": ["gym", "clases", "2", "equipos"]
+                  "path": [
+                    "gym",
+                    "clases",
+                    "2",
+                    "equipos"
+                  ]
                 }
               },
               "response": []
@@ -765,9 +1110,16 @@
                 "url": {
                   "raw": "http://localhost:8082/gym/clases/2/detalle",
                   "protocol": "http",
-                  "host": ["localhost"],
+                  "host": [
+                    "localhost"
+                  ],
                   "port": "8082",
-                  "path": ["gym", "clases", "2", "detalle"]
+                  "path": [
+                    "gym",
+                    "clases",
+                    "2",
+                    "detalle"
+                  ]
                 }
               },
               "response": []
@@ -780,9 +1132,16 @@
                 "url": {
                   "raw": "http://localhost:8082/gym/clases/2/verificar-disponibilidad",
                   "protocol": "http",
-                  "host": ["localhost"],
+                  "host": [
+                    "localhost"
+                  ],
                   "port": "8082",
-                  "path": ["gym", "clases", "2", "verificar-disponibilidad"]
+                  "path": [
+                    "gym",
+                    "clases",
+                    "2",
+                    "verificar-disponibilidad"
+                  ]
                 }
               },
               "response": []
@@ -795,9 +1154,16 @@
                 "url": {
                   "raw": "http://localhost:8082/gym/clases/2/reservar-equipos",
                   "protocol": "http",
-                  "host": ["localhost"],
+                  "host": [
+                    "localhost"
+                  ],
                   "port": "8082",
-                  "path": ["gym", "clases", "2", "reservar-equipos"]
+                  "path": [
+                    "gym",
+                    "clases",
+                    "2",
+                    "reservar-equipos"
+                  ]
                 },
                 "description": "Reserva todos los equipos necesarios cuando inicia la clase"
               },
@@ -811,9 +1177,16 @@
                 "url": {
                   "raw": "http://localhost:8082/gym/clases/2/liberar-equipos",
                   "protocol": "http",
-                  "host": ["localhost"],
+                  "host": [
+                    "localhost"
+                  ],
                   "port": "8082",
-                  "path": ["gym", "clases", "2", "liberar-equipos"]
+                  "path": [
+                    "gym",
+                    "clases",
+                    "2",
+                    "liberar-equipos"
+                  ]
                 },
                 "description": "Libera todos los equipos cuando termina la clase"
               },
@@ -827,9 +1200,17 @@
                 "url": {
                   "raw": "http://localhost:8082/gym/clases/2/equipos/5",
                   "protocol": "http",
-                  "host": ["localhost"],
+                  "host": [
+                    "localhost"
+                  ],
                   "port": "8082",
-                  "path": ["gym", "clases", "2", "equipos", "5"]
+                  "path": [
+                    "gym",
+                    "clases",
+                    "2",
+                    "equipos",
+                    "5"
+                  ]
                 },
                 "description": "Elimina el equipo Elíptica (id=5) de la clase Spinning (id=2)"
               },
@@ -848,9 +1229,15 @@
                 "url": {
                   "raw": "http://localhost:8082/gym/clases/entrenadores-disponibles",
                   "protocol": "http",
-                  "host": ["localhost"],
+                  "host": [
+                    "localhost"
+                  ],
                   "port": "8082",
-                  "path": ["gym", "clases", "entrenadores-disponibles"]
+                  "path": [
+                    "gym",
+                    "clases",
+                    "entrenadores-disponibles"
+                  ]
                 }
               },
               "response": []
@@ -863,10 +1250,21 @@
                 "url": {
                   "raw": "http://localhost:8082/gym/clases/por-especialidad?especialidad=Yoga",
                   "protocol": "http",
-                  "host": ["localhost"],
+                  "host": [
+                    "localhost"
+                  ],
                   "port": "8082",
-                  "path": ["gym", "clases", "por-especialidad"],
-                  "query": [{"key": "especialidad", "value": "Yoga"}]
+                  "path": [
+                    "gym",
+                    "clases",
+                    "por-especialidad"
+                  ],
+                  "query": [
+                    {
+                      "key": "especialidad",
+                      "value": "Yoga"
+                    }
+                  ]
                 }
               },
               "response": []
@@ -879,14 +1277,25 @@
                 "body": {
                   "mode": "raw",
                   "raw": "{\n    \"entrenadorId\": 1\n}",
-                  "options": {"raw": {"language": "json"}}
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
                 },
                 "url": {
                   "raw": "http://localhost:8082/gym/clases/1/entrenador",
                   "protocol": "http",
-                  "host": ["localhost"],
+                  "host": [
+                    "localhost"
+                  ],
                   "port": "8082",
-                  "path": ["gym", "clases", "1", "entrenador"]
+                  "path": [
+                    "gym",
+                    "clases",
+                    "1",
+                    "entrenador"
+                  ]
                 }
               },
               "response": []
@@ -899,9 +1308,16 @@
                 "url": {
                   "raw": "http://localhost:8082/gym/clases/1/con-entrenador",
                   "protocol": "http",
-                  "host": ["localhost"],
+                  "host": [
+                    "localhost"
+                  ],
                   "port": "8082",
-                  "path": ["gym", "clases", "1", "con-entrenador"]
+                  "path": [
+                    "gym",
+                    "clases",
+                    "1",
+                    "con-entrenador"
+                  ]
                 }
               },
               "response": []
@@ -914,9 +1330,15 @@
                 "url": {
                   "raw": "http://localhost:8082/gym/clases/con-entrenadores",
                   "protocol": "http",
-                  "host": ["localhost"],
+                  "host": [
+                    "localhost"
+                  ],
                   "port": "8082",
-                  "path": ["gym", "clases", "con-entrenadores"]
+                  "path": [
+                    "gym",
+                    "clases",
+                    "con-entrenadores"
+                  ]
                 }
               },
               "response": []
@@ -929,9 +1351,16 @@
                 "url": {
                   "raw": "http://localhost:8082/gym/clases/1/entrenador",
                   "protocol": "http",
-                  "host": ["localhost"],
+                  "host": [
+                    "localhost"
+                  ],
                   "port": "8082",
-                  "path": ["gym", "clases", "1", "entrenador"]
+                  "path": [
+                    "gym",
+                    "clases",
+                    "1",
+                    "entrenador"
+                  ]
                 }
               },
               "response": []
@@ -954,9 +1383,15 @@
                 "url": {
                   "raw": "http://localhost:8081/api/equipment/available",
                   "protocol": "http",
-                  "host": ["localhost"],
+                  "host": [
+                    "localhost"
+                  ],
                   "port": "8081",
-                  "path": ["api", "equipment", "available"]
+                  "path": [
+                    "api",
+                    "equipment",
+                    "available"
+                  ]
                 }
               },
               "response": []
@@ -969,14 +1404,27 @@
                 "body": {
                   "mode": "raw",
                   "raw": "{\n    \"cantidad\": 3\n}",
-                  "options": {"raw": {"language": "json"}}
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
                 },
                 "url": {
                   "raw": "http://localhost:8080/api/miembros/1/equipos/1/usar",
                   "protocol": "http",
-                  "host": ["localhost"],
+                  "host": [
+                    "localhost"
+                  ],
                   "port": "8080",
-                  "path": ["api", "miembros", "1", "equipos", "1", "usar"]
+                  "path": [
+                    "api",
+                    "miembros",
+                    "1",
+                    "equipos",
+                    "1",
+                    "usar"
+                  ]
                 }
               },
               "response": []
@@ -989,9 +1437,15 @@
                 "url": {
                   "raw": "http://localhost:8081/api/equipment/1",
                   "protocol": "http",
-                  "host": ["localhost"],
+                  "host": [
+                    "localhost"
+                  ],
                   "port": "8081",
-                  "path": ["api", "equipment", "1"]
+                  "path": [
+                    "api",
+                    "equipment",
+                    "1"
+                  ]
                 }
               },
               "response": []
@@ -1004,14 +1458,27 @@
                 "body": {
                   "mode": "raw",
                   "raw": "{\n    \"cantidad\": 2\n}",
-                  "options": {"raw": {"language": "json"}}
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
                 },
                 "url": {
                   "raw": "http://localhost:8080/api/miembros/1/equipos/1/liberar",
                   "protocol": "http",
-                  "host": ["localhost"],
+                  "host": [
+                    "localhost"
+                  ],
                   "port": "8080",
-                  "path": ["api", "miembros", "1", "equipos", "1", "liberar"]
+                  "path": [
+                    "api",
+                    "miembros",
+                    "1",
+                    "equipos",
+                    "1",
+                    "liberar"
+                  ]
                 }
               },
               "response": []
@@ -1024,9 +1491,15 @@
                 "url": {
                   "raw": "http://localhost:8081/api/equipment/1",
                   "protocol": "http",
-                  "host": ["localhost"],
+                  "host": [
+                    "localhost"
+                  ],
                   "port": "8081",
-                  "path": ["api", "equipment", "1"]
+                  "path": [
+                    "api",
+                    "equipment",
+                    "1"
+                  ]
                 }
               },
               "response": []
@@ -1044,9 +1517,15 @@
                 "url": {
                   "raw": "http://localhost:8081/api/equipment/3",
                   "protocol": "http",
-                  "host": ["localhost"],
+                  "host": [
+                    "localhost"
+                  ],
                   "port": "8081",
-                  "path": ["api", "equipment", "3"]
+                  "path": [
+                    "api",
+                    "equipment",
+                    "3"
+                  ]
                 }
               },
               "response": []
@@ -1059,14 +1538,25 @@
                 "body": {
                   "mode": "raw",
                   "raw": "{\n    \"equipoId\": 3,\n    \"cantidadRequerida\": 10\n}",
-                  "options": {"raw": {"language": "json"}}
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
                 },
                 "url": {
                   "raw": "http://localhost:8082/gym/clases/4/equipos",
                   "protocol": "http",
-                  "host": ["localhost"],
+                  "host": [
+                    "localhost"
+                  ],
                   "port": "8082",
-                  "path": ["gym", "clases", "4", "equipos"]
+                  "path": [
+                    "gym",
+                    "clases",
+                    "4",
+                    "equipos"
+                  ]
                 },
                 "description": "Agregar Mancuernas 10kg (id=3) a CrossFit (id=4)"
               },
@@ -1080,14 +1570,25 @@
                 "body": {
                   "mode": "raw",
                   "raw": "{\n    \"equipoId\": 4,\n    \"cantidadRequerida\": 4\n}",
-                  "options": {"raw": {"language": "json"}}
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
                 },
                 "url": {
                   "raw": "http://localhost:8082/gym/clases/4/equipos",
                   "protocol": "http",
-                  "host": ["localhost"],
+                  "host": [
+                    "localhost"
+                  ],
                   "port": "8082",
-                  "path": ["gym", "clases", "4", "equipos"]
+                  "path": [
+                    "gym",
+                    "clases",
+                    "4",
+                    "equipos"
+                  ]
                 },
                 "description": "Agregar Banco de Pesas (id=4) a CrossFit (id=4)"
               },
@@ -1101,9 +1602,16 @@
                 "url": {
                   "raw": "http://localhost:8082/gym/clases/4/equipos",
                   "protocol": "http",
-                  "host": ["localhost"],
+                  "host": [
+                    "localhost"
+                  ],
                   "port": "8082",
-                  "path": ["gym", "clases", "4", "equipos"]
+                  "path": [
+                    "gym",
+                    "clases",
+                    "4",
+                    "equipos"
+                  ]
                 }
               },
               "response": []
@@ -1116,9 +1624,16 @@
                 "url": {
                   "raw": "http://localhost:8082/gym/clases/4/verificar-disponibilidad",
                   "protocol": "http",
-                  "host": ["localhost"],
+                  "host": [
+                    "localhost"
+                  ],
                   "port": "8082",
-                  "path": ["gym", "clases", "4", "verificar-disponibilidad"]
+                  "path": [
+                    "gym",
+                    "clases",
+                    "4",
+                    "verificar-disponibilidad"
+                  ]
                 }
               },
               "response": []
@@ -1131,9 +1646,16 @@
                 "url": {
                   "raw": "http://localhost:8082/gym/clases/4/reservar-equipos",
                   "protocol": "http",
-                  "host": ["localhost"],
+                  "host": [
+                    "localhost"
+                  ],
                   "port": "8082",
-                  "path": ["gym", "clases", "4", "reservar-equipos"]
+                  "path": [
+                    "gym",
+                    "clases",
+                    "4",
+                    "reservar-equipos"
+                  ]
                 }
               },
               "response": []
@@ -1146,9 +1668,15 @@
                 "url": {
                   "raw": "http://localhost:8081/api/equipment/3",
                   "protocol": "http",
-                  "host": ["localhost"],
+                  "host": [
+                    "localhost"
+                  ],
                   "port": "8081",
-                  "path": ["api", "equipment", "3"]
+                  "path": [
+                    "api",
+                    "equipment",
+                    "3"
+                  ]
                 }
               },
               "response": []
@@ -1161,9 +1689,16 @@
                 "url": {
                   "raw": "http://localhost:8082/gym/clases/4/liberar-equipos",
                   "protocol": "http",
-                  "host": ["localhost"],
+                  "host": [
+                    "localhost"
+                  ],
                   "port": "8082",
-                  "path": ["gym", "clases", "4", "liberar-equipos"]
+                  "path": [
+                    "gym",
+                    "clases",
+                    "4",
+                    "liberar-equipos"
+                  ]
                 }
               },
               "response": []
@@ -1176,9 +1711,15 @@
                 "url": {
                   "raw": "http://localhost:8081/api/equipment/3",
                   "protocol": "http",
-                  "host": ["localhost"],
+                  "host": [
+                    "localhost"
+                  ],
                   "port": "8081",
-                  "path": ["api", "equipment", "3"]
+                  "path": [
+                    "api",
+                    "equipment",
+                    "3"
+                  ]
                 }
               },
               "response": []
@@ -1196,9 +1737,16 @@
                 "url": {
                   "raw": "http://localhost:8081/api/equipment/2/maintenance",
                   "protocol": "http",
-                  "host": ["localhost"],
+                  "host": [
+                    "localhost"
+                  ],
                   "port": "8081",
-                  "path": ["api", "equipment", "2", "maintenance"]
+                  "path": [
+                    "api",
+                    "equipment",
+                    "2",
+                    "maintenance"
+                  ]
                 }
               },
               "response": []
@@ -1211,14 +1759,25 @@
                 "body": {
                   "mode": "raw",
                   "raw": "{\n    \"cantidad\": 1\n}",
-                  "options": {"raw": {"language": "json"}}
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
                 },
                 "url": {
                   "raw": "http://localhost:8081/api/equipment/2/use",
                   "protocol": "http",
-                  "host": ["localhost"],
+                  "host": [
+                    "localhost"
+                  ],
                   "port": "8081",
-                  "path": ["api", "equipment", "2", "use"]
+                  "path": [
+                    "api",
+                    "equipment",
+                    "2",
+                    "use"
+                  ]
                 }
               },
               "response": []
@@ -1231,9 +1790,16 @@
                 "url": {
                   "raw": "http://localhost:8081/api/equipment/2/end-maintenance",
                   "protocol": "http",
-                  "host": ["localhost"],
+                  "host": [
+                    "localhost"
+                  ],
                   "port": "8081",
-                  "path": ["api", "equipment", "2", "end-maintenance"]
+                  "path": [
+                    "api",
+                    "equipment",
+                    "2",
+                    "end-maintenance"
+                  ]
                 }
               },
               "response": []
@@ -1246,14 +1812,25 @@
                 "body": {
                   "mode": "raw",
                   "raw": "{\n    \"cantidad\": 1\n}",
-                  "options": {"raw": {"language": "json"}}
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
                 },
                 "url": {
                   "raw": "http://localhost:8081/api/equipment/2/use",
                   "protocol": "http",
-                  "host": ["localhost"],
+                  "host": [
+                    "localhost"
+                  ],
                   "port": "8081",
-                  "path": ["api", "equipment", "2", "use"]
+                  "path": [
+                    "api",
+                    "equipment",
+                    "2",
+                    "use"
+                  ]
                 }
               },
               "response": []
@@ -1261,6 +1838,274 @@
           ]
         }
       ]
+    },
+    {
+      "name": "KAFKA",
+      "item": [
+        {
+          "name": "login",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "var jsonData = pm.response.json();",
+                  "pm.globals.set(\"accestoken\", jsonData.access_token);"
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "key": "grant_type",
+                  "value": "password",
+                  "type": "text",
+                  "uuid": "2112bc1b-a1cc-48f8-b122-2514a96abdc0"
+                },
+                {
+                  "key": "client_id",
+                  "value": "admin-cli",
+                  "type": "text",
+                  "uuid": "f2cc6392-e6e0-4759-b37b-9b4e238a543c"
+                },
+                {
+                  "key": "username",
+                  "value": "admin",
+                  "type": "text",
+                  "uuid": "4191d47d-85f6-4232-8137-8a172830fd8f"
+                },
+                {
+                  "key": "password",
+                  "value": "admin",
+                  "type": "text",
+                  "uuid": "d39248ec-493f-4f92-8084-116e243ca8c2"
+                }
+              ]
+            },
+            "url": {
+              "raw": "http://localhost:8180/realms/gimnasio/protocol/openid-connect/token",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8180",
+              "path": [
+                "realms",
+                "gimnasio",
+                "protocol",
+                "openid-connect",
+                "token"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Entramientos",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{accestoken}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"tipoEntrenamiento\": \"crossfit\",\r\n  \"duracionMinutos\": 80,\r\n  \"calorias\": 500\r\n}\r\n",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/entrenamientos/7",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "entrenamientos",
+                "7"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Ocupación",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJXX2hyV3VncTJRejZ2M1pYZk1zZnF5M1NnX3lTX2tURzdlcTlud0tETkRVIn0.eyJleHAiOjE3NzM2OTg1MzAsImlhdCI6MTc3MzY5ODIzMCwianRpIjoib25sdHJvOmZmNDdlNjBlLWM3ZDgtOTJkYi04M2M1LWZlOGE5ZDVmYjkyYiIsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODE4MC9yZWFsbXMvZ2ltbmFzaW8iLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJhZG1pbi1jbGkiLCJzaWQiOiJyUldGNFVGWjRyMmRNSW9TcnpMWXFxaXEiLCJzY29wZSI6ImVtYWlsIHByb2ZpbGUifQ.MFCwBurcADauuL_AeFs700gBwZLIsIVaHOmmL-5pUjzPxwWinEh7gGwmJsSBF6u4flUpGf2qKBayfRHEf8Dpi27sB8ePFIOBU72CFDvmhWZMenKhpndkGT3ayBgTM8veN5XlMmuniw95oA44RKe4bh9PBxueBo-nH-3xJc929bZu_xOSDe0scLiEde7EteN2XSs4qOCSiKdE_Jb4_wbZqxgw8DLLzo-UFOP0rvFEIuh61PR6YNfZwyTquQAer295cAiiY3DcAWuni84UwWcmfnFoRvVdmSoTZMZIOMo6oo36xDP894lVfkwSuRK5klzFmxVSTXwZlIxfM6pXCEnWVQ",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"ocupacionActual\": 12\r\n}\r\n",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8082/gym/clases/2/ocupacion",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8082",
+              "path": [
+                "gym",
+                "clases",
+                "2",
+                "ocupacion"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Recuperacion etrenamientos",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJXX2hyV3VncTJRejZ2M1pYZk1zZnF5M1NnX3lTX2tURzdlcTlud0tETkRVIn0.eyJleHAiOjE3NzM2OTg1MzAsImlhdCI6MTc3MzY5ODIzMCwianRpIjoib25sdHJvOmZmNDdlNjBlLWM3ZDgtOTJkYi04M2M1LWZlOGE5ZDVmYjkyYiIsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODE4MC9yZWFsbXMvZ2ltbmFzaW8iLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJhZG1pbi1jbGkiLCJzaWQiOiJyUldGNFVGWjRyMmRNSW9TcnpMWXFxaXEiLCJzY29wZSI6ImVtYWlsIHByb2ZpbGUifQ.MFCwBurcADauuL_AeFs700gBwZLIsIVaHOmmL-5pUjzPxwWinEh7gGwmJsSBF6u4flUpGf2qKBayfRHEf8Dpi27sB8ePFIOBU72CFDvmhWZMenKhpndkGT3ayBgTM8veN5XlMmuniw95oA44RKe4bh9PBxueBo-nH-3xJc929bZu_xOSDe0scLiEde7EteN2XSs4qOCSiKdE_Jb4_wbZqxgw8DLLzo-UFOP0rvFEIuh61PR6YNfZwyTquQAer295cAiiY3DcAWuni84UwWcmfnFoRvVdmSoTZMZIOMo6oo36xDP894lVfkwSuRK5klzFmxVSTXwZlIxfM6pXCEnWVQ",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/entrenamientos/recuperacion/iniciar",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "entrenamientos",
+                "recuperacion",
+                "iniciar"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Resumen",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{accestoken}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/entrenamientos/resumen/7",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "entrenamientos",
+                "resumen",
+                "7"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ],
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    },
+    {
+      "listen": "test",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    }
+  ],
+  "variable": [
+    {
+      "key": "accesToken",
+      "value": "",
+      "type": "default"
     }
   ]
 }
