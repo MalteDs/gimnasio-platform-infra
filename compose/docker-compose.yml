@@ -48,10 +48,26 @@ services:
       KAFKA_TRANSACTION_STATE_LOG_MIN_ISR: 1
       KAFKA_LOG_DIRS: /var/lib/kafka/data
       CLUSTER_ID: 'MkU3OEVBNTcwNTJENDM2Qk'
+      KAFKA_AUTO_CREATE_TOPICS_ENABLE: "true"
     ports:
       - "29092:29092"
     volumes:
       - kafka_data:/var/lib/kafka/data
+    networks:
+      - gimnasio-network
+
+  # ==================== KAFKA INIT (crea topics al iniciar) ====================
+  kafka-init:
+    image: apache/kafka:3.7.0
+    container_name: kafka-init-gimnasio
+    depends_on:
+      - kafka
+    entrypoint: ["/bin/sh", "-c"]
+    command: >
+      "sleep 8 &&
+       /opt/kafka/bin/kafka-topics.sh --bootstrap-server kafka:9092 --create --if-not-exists --topic datos-entrenamiento --partitions 1 --replication-factor 1 &&
+       /opt/kafka/bin/kafka-topics.sh --bootstrap-server kafka:9092 --create --if-not-exists --topic resumen-entrenamiento --partitions 1 --replication-factor 1 &&
+       /opt/kafka/bin/kafka-topics.sh --bootstrap-server kafka:9092 --create --if-not-exists --topic ocupacion-clases --partitions 1 --replication-factor 1"
     networks:
       - gimnasio-network
 
