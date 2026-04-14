@@ -1,6 +1,19 @@
 version: '3.8'
 
 services:
+  # ==================== EUREKA ====================
+  eureka-server:
+    image: maven:3.9.9-eclipse-temurin-17
+    container_name: eureka-server-gimnasio
+    working_dir: /workspace/discovery-server
+    command: mvn spring-boot:run
+    ports:
+      - "8761:8761"
+    volumes:
+      - ../../../discovery-server:/workspace/discovery-server
+    networks:
+      - gimnasio-network
+
   # ==================== KEYCLOAK ====================
   keycloak:
     image: quay.io/keycloak/keycloak:26.5.5
