@@ -23,8 +23,11 @@ services:
       KC_BOOTSTRAP_ADMIN_PASSWORD: admin
     ports:
       - "8180:8080"
+    volumes:
+      - ../keycloak/realms:/opt/keycloak/data/import
     command:
       - start-dev
+      - --import-realm
     networks:
       - gimnasio-network
 
